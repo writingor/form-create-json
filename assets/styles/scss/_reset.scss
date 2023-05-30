@@ -1,0 +1,28 @@
+
+html,
+body {
+    font-family: var(--font-family-main);
+    font-size: 16px; // root
+    line-height: var(--line-height-xl);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    border: none;
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+}

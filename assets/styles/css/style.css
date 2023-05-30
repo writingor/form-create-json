@@ -1,0 +1,195 @@
+:root {
+  --font-family-main: sans-serif;
+  --font-family-secondary: serif;
+  --font-size-s: 0.75rem;
+  --font-size-m: 1rem;
+  --font-size-l: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 1.75rem;
+  --font-size-3xl: 2rem;
+  --line-height-s: 0.75em;
+  --line-height-m: 1em;
+  --line-height-l: 1.25em;
+  --line-height-xl: 1.5em;
+  --line-height-2xl: 1.75em;
+  --line-height-3xl: 2em;
+  --color-white-1: #ffffff;
+  --color-black-1: #111111;
+  --color-green-1: #008653;
+  --color-red-1: #d31c25;
+  --font-main: normal 400 var(--font-size-m) / var(--line-height-xl) var(--font-family-main);
+}
+
+html,
+body {
+  font-family: var(--font-family-main);
+  font-size: 16px;
+  line-height: var(--line-height-xl);
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+  border: none;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+.input-wrapper.invalid textarea,
+.input-wrapper.invalid input {
+  border: 1px solid var(--color-red-1);
+}
+.input-wrapper.valid textarea,
+.input-wrapper.valid input {
+  border: 1px solid var(--color-green-1);
+}
+
+.input-1 input {
+  width: 100%;
+  padding: 0.7em 1.2em;
+  border: 1px solid var(--color-black-1);
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+}
+
+.textarea-1 textarea {
+  width: 100%;
+  padding: 0.7em 1.2em;
+  border: 1px solid var(--color-black-1);
+  resize: none;
+}
+
+.form-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  gap: 1rem;
+}
+
+.writingor--modal {
+  position: relative;
+  z-index: -1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  width: 100%;
+  max-width: 900px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 50px 40px 45px;
+  background: white;
+  -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+@media screen and (max-width: 500px) {
+  .writingor--modal {
+    padding: 40px 30px 35px;
+  }
+}
+.writingor--modal_active {
+  display: block;
+  z-index: 1000;
+}
+.writingor--modal__hide {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.writingor--modal__hide::after, .writingor--modal__hide::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 36px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.writingor--modal__hide::before {
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.writingor--modal__hide::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.writingor--body-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 100px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.writingor--body-overlay::-webkit-scrollbar {
+  display: none;
+}
+.writingor--body-overlay_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.writingor--body_locked {
+  overflow: hidden;
+}
+
+.writingor--modals-heap {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: none;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}/*# sourceMappingURL=style.css.map */

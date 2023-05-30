@@ -1,0 +1,15 @@
+.input-wrapper {
+    &.invalid {
+        textarea,
+        input {
+            border: 1px solid var(--color-red-1);
+        }
+    }
+    
+    &.valid {
+        textarea,
+        input {
+            border: 1px solid var(--color-green-1);
+        }
+    }
+}

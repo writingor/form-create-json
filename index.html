@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="./assets/styles/css/style.min.css">
+    <!--/ styles -->
+    
+    <title>Modal form 1</title>
+</head>
+<body>
+    
+    <div class="root" id="root">
+        
+        <!-- modal 1 group -->
+        <a href="#modal-1" data-modal>
+            Open Modal
+        </a>
+
+        <div id="modal-1" class="writingor--modal">
+            <h2>Modal</h2>
+            
+            <!-- form-1 -->
+            <form action="/" method="post" onsubmit="createJson(event)" class="form-1">
+                <div class="input-1 input-wrapper">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <div class="tooltip-1"></div>
+                </div>
+                <div class="input-1 input-wrapper">
+                    <input type="tel" name="tel" placeholder="Tel" class="imask-tel" required>
+                    <div class="tooltip-1"></div>
+                </div>
+                <div class="textarea-1 input-wrapper">
+                    <textarea name="message" placeholder="Message"></textarea>
+                    <div class="tooltip-1"></div>
+                </div>
+
+                <button data-text-1="Send" data-text-2="Wait...">Send</button>
+
+                <div class="response"></div>
+            </form>
+            <!--/ form-1 -->
+        </div>
+        <!--/ modal 1 group -->
+
+    </div>
+    
+    <!-- scripts -->
+    <script src="./assets/scripts/js/imask.js"></script>
+    <script src="./assets/scripts/js/script.js"></script>
+    <!--/ scripts -->
+</body>
+</html>

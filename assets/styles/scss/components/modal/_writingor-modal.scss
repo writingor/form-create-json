@@ -1,0 +1,95 @@
+.writingor--modal {
+    position: relative;
+    z-index: -1;
+    box-sizing: border-box;
+    display: none;
+    width: 100%;
+    max-width: 900px;
+    height: fit-content;
+    padding: 50px 40px 45px;
+    background: white;
+    box-shadow: 0 0 16px rgba(#000000, .2);
+    overflow: hidden;
+
+    @media screen and (max-width: 500px) {
+        padding: 40px 30px 35px;
+    }
+
+    &_active {
+        display: block;
+        z-index: 1000;
+    }
+
+    &__hide {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 100;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 36px;
+            height: 2px;
+            background-color: rgba(#000000, .5);
+        }
+    
+        &::before {
+            transform: rotate(-45deg);
+        }
+        
+        &::after {
+            transform: rotate(45deg);
+        }
+    }
+}
+
+.writingor--body-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    box-sizing: border-box;
+    display: none;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: 100px 20px;
+    background: rgba(#000000, .2);
+    backdrop-filter: blur(5px);
+    overflow-y: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    &_active {
+        display: flex;
+    }
+}
+
+.writingor--body {
+    // pass
+
+    &_locked {
+        overflow: hidden;
+    }
+}
+
+.writingor--modals-heap {
+    box-sizing: border-box;
+    display: none;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
